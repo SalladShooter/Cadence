@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadence</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <img src="Cadence.png">
+      <h1>Cadence</h1>
+    </div>
+
+    <svg width="150" height="150" class="progress-circle">
+      <circle cx="75" cy="75" r="65" stroke="#333" stroke-width="15" fill="none" transform="rotate(-90 75 75)" />
+      <circle id="progress-circle" cx="75" cy="75" r="65" stroke="#70ffa5" stroke-width="15" fill="none"
+            stroke-dasharray="439.82" stroke-dashoffset="439.82" stroke-linecap="round"
+            transform="rotate(-90 75 75)" />
+      <text id="timer" x="75" y="85" text-anchor="middle" fill="white" font-size="30px" font-family="Arial">
+        00:00
+      </text>
+    </svg>
+
+    <div class="custom-time">
+      <div class="number-input">
+        <button class="arrow up">&#9650;</button>
+        <input type="number" id="minutes" value="0" min="0" step="1">
+        <button class="arrow down">&#9660;</button>
+      </div>
+      <div class="number-input">
+        <button class="arrow up">&#9650;</button>
+        <input type="number" id="seconds" value="30" min="0" max="59" step="1">
+        <button class="arrow down">&#9660;</button>
+      </div>
+      <input type="text" id="custom-label" class="custom-label" placeholder="Label (e.g., Tempo)">
+      <button id="add-timer">Add Timer</button>
+    </div>
+
+    <h2>Build a Set</h2>
+    <div id="block-builder">
+      <label>Repeats: <input type="number" id="block-repeats" value="1" min="1"></label>
+      <table id="block-steps">
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>Minutes</th>
+            <th>Seconds</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <button id="add-step">Add Step</button>
+      <button id="add-block">Add Block to Queue</button>
+    </div>
+
+    <h2>Queue</h2>
+    <ul id="timer-queue"></ul>
+
+    <button id="start-sequence">Start Workout</button>
+    <button id="skip-timer">Skip Current Timer</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

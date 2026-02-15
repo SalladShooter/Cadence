@@ -1,0 +1,178 @@
+:root {
+  --warning: #ff2050;
+  --main: #70a5ff;
+  --active: #20ba45;
+  --back: #111
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--back);
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  transition: all 0.15s ease-in-out;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 5em;
+  aspect-ratio: 1 / 1;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle {
+  margin: 20px auto;
+  display: block;
+}
+
+#timer {
+  font-weight: bold;
+}
+
+.custom-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.number-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-input input {
+  width: 2ch;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.arrow {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 50em;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+}
+
+.arrow:active {
+  background: #666;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50em;
+  border: none;
+  background: var(--main);
+}
+
+button:hover {
+  transform: scale(1.1);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.remove-step {
+  background: var(--warning);
+}
+
+input {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+#timer-queue {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#timer-queue li {
+  margin: 0.5em 1em;
+  padding: 0.5em 1em;
+  background: #222224;
+  border-radius: 50em;
+  transition: background 0.2s;
+}
+
+#timer-queue li.active {
+  background: var(--active);
+  color: var(--back);
+}
+
+#timer-queue li.active > .remove-btn {
+  background: #222224;
+  color: white;
+}
+
+#timer-queue span {
+  margin-right: 2em;
+}
+
+.remove-btn {
+  background: var(--warning);
+}
+
+#block-builder {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+}
+
+#block-builder table {
+  width: auto;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+.custom-label, .step-label {
+  height: 2.5ch !important;
+}
+
+label {
+  font-size: 16px;
+}
+
+input[type="number"] {
+  width: 60px;
+  font-size: 20px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
